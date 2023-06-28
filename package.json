@@ -1,0 +1,38 @@
+{
+  "private": false,
+  "name": "tn-apollo-link-token-refresh",
+  "version": "2.0.1",
+  "description": " ",
+  "keywords": [],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "Serve": "parcel .dev/parcel/index.html --out-dir .dev/parcel/dist --cache-dir .dev/parcel/cache --open",
+    "Build": "rimraf dist && rollup -c",
+    "Publish": "rimraf .dev/parcel/dist & rimraf .dev/parcel/cache && yarn run Build && yarn publish"
+  },
+  "author": "Turnova",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.20.0",
+    "jwt-decode": "^3.1.2"
+  },
+  "peerDependencies": {
+    "@apollo/client": "^3.7.1"
+  },
+  "devDependencies": {
+    "@apollo/client": "^3.7.1",
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@rollup/plugin-babel": "^6.0.2",
+    "@types/node": "^18.11.7",
+    "browserslist": "^4.21.4",
+    "rollup": "^3.2.3",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "tn-typescript": "^1.2.3",
+    "typescript": "^4.8.4"
+  }
+}

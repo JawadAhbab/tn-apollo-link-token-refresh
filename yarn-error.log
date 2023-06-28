@@ -1,0 +1,76 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;E:\xampp\php;C:\Android;C:\Program Files\nodejs\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\Jawad Ahbab Turna\AppData\Local\Microsoft\WindowsApps;C:\Users\Jawad Ahbab Turna\AppData\Roaming\Composer\vendor\bin;C:\Users\Jawad Ahbab Turna\AppData\Roaming\npm;C:\Users\Jawad Ahbab Turna\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Jawad Ahbab Turna\AppData\Local\Microsoft\WindowsApps;C:\Users\Jawad Ahbab Turna\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: read ECONNRESET
+      at TLSWrap.onStreamRead (internal/stream_base_commons.js:200:27)
+
+npm manifest: 
+  {
+    "private": true,
+    "name": "tn-package",
+    "version": "1.0.0",
+    "description": "description",
+    "keywords": [],
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/types/index.d.ts",
+    "scripts": {
+      "Serve": "parcel .dev/parcel/index.html --out-dir .dev/parcel/dist --cache-dir .dev/parcel/cache --open",
+      "Tests": "ts-mocha -p tsconfig.mocha.json tests/**/*.ts",
+      "Lintfix": "eslint ./src/**/*.ts --fix",
+      "Build": "rimraf dist && rollup -c && node .dev/packsize.js",
+      "Publish": "rimraf .dev/parcel/dist & rimraf .dev/parcel/cache & npm run Tests && npm run Lintfix && npm run Build && npm publish"
+    },
+    "author": "Turnova",
+    "license": "MIT",
+    "dependencies": {
+      "@babel/runtime": "^7.14.0"
+    },
+    "peerDependencies": {},
+    "devDependencies": {
+      "@babel/cli": "^7.13.16",
+      "@babel/core": "^7.14.0",
+      "@babel/plugin-transform-runtime": "^7.13.15",
+      "@babel/preset-env": "^7.14.1",
+      "@rollup/plugin-babel": "^5.3.0",
+      "@rollup/plugin-replace": "^2.4.2",
+      "@types/chai": "^4.2.18",
+      "@types/node": "^15.0.2",
+      "@types/mocha": "^8.2.2",
+      "@typescript-eslint/eslint-plugin": "^4.22.1",
+      "@typescript-eslint/parser": "^4.22.1",
+      "chai": "^4.3.4",
+      "eslint": "^7.26.0",
+      "eslint-config-standard": "^16.0.2",
+      "eslint-plugin-import": "^2.22.1",
+      "eslint-plugin-node": "^11.1.0",
+      "eslint-plugin-promise": "^4.2.1",
+      "eslint-plugin-standard": "^5.0.0",
+      "gzip-size": "^6.0.0",
+      "mocha": "^8.4.0",
+      "rollup": "^2.47.0",
+      "rollup-plugin-terser": "^7.0.2",
+      "rollup-plugin-typescript2": "^0.30.0",
+      "ts-mocha": "^8.0.0",
+      "typescript": "^4.2.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
